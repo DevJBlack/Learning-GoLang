@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type kind interface {
+type shape interface {
 	getArea() float64
 }
 
@@ -19,7 +19,7 @@ func main() {
 
 	t := triangle{
 		height: 10,
-		base:   5,
+		base:   10,
 	}
 	s := square{
 		sideLength: 10,
@@ -29,8 +29,8 @@ func main() {
 	printArea(t)
 }
 
-func printArea(k kind) {
-	fmt.Println(k.getArea())
+func printArea(s shape) {
+	fmt.Println(s.getArea())
 }
 
 func (s square) getArea() float64 {
