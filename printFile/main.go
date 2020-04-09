@@ -6,8 +6,7 @@ import (
 	"os"
 )
 
-type file struct {
-}
+type file struct{}
 
 func main() {
 	f, err := os.Open(os.Args[1])
